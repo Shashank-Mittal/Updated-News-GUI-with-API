@@ -264,7 +264,6 @@ class News:
 	def __init__(self,third):
 		self.third=third
 		self.third.title("Updated News")
-		#self.main_url = "https://newsapi.org/v2/top-headlines?sources=the-hindu&apiKey=80dcf91e3abd4c62a5154f0e33c25bc4"
 		self.third.configure(bg="black",height=5000,width=5000)
 		self.background_image=PhotoImage(file="789.png")
 		self.b=PhotoImage(file="ll.png")
@@ -288,7 +287,7 @@ class News:
 		self.buttonLO=Button(third,text="Logout",bg="black",fg="white",command=self.quit,width=5,font=(20))
 		self.buttonLO.place(x=1180,y=60)
 		try:
-			main_url1 = "https://newsapi.org/v2/top-headlines?sources=the-hindu&apiKey=80dcf91e3abd4c62a5154f0e33c25bc4"
+			main_url1 = "https://newsapi.org/v2/top-headlines?sources=the-hindu&apiKey=<Insert your API Key>"
 			open_page = requests.get(main_url1).json()
 			article = open_page["articles"]
 			results = []
@@ -319,8 +318,6 @@ class News:
 			self.Head=Label(self.third,text="OOPS!!! Please connect to th Network",fg="White",font=(20),bg="black")
 			self.Head.place(x=500,y=300)
 	def button11(self,main_url):
-	
-		#self.main_url1="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=80dcf91e3abd4c62a5154f0e33c25bc4"
 		try:	
 			self.main_url1=main_url
 			open_page = requests.get(self.main_url1).json()
@@ -357,22 +354,22 @@ class News:
 			self.Head=Label(self.third,text="OOPS!!! Please connect to th Network",fg="black",font=(50),bg="white")
 			self.Head.place(x=500,y=300)
 	def business(self):
-		main_url=self.main_url1="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=80dcf91e3abd4c62a5154f0e33c25bc4"
+		main_url=self.main_url1="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=<Insert your API Key>"
 		self.button11(main_url)
 	def Technology(self):
-		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=80dcf91e3abd4c62a5154f0e33c25bc4"
+		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=<Insert your API Key>"
 		self.button11(main_url)
 	def Entertainment(self):
-		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=80dcf91e3abd4c62a5154f0e33c25bc4"
+		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=<Insert your API Key>"
 		self.button11(main_url)
 	def Science(self):
-		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=80dcf91e3abd4c62a5154f0e33c25bc4"
+		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=<Insert your API Key>"
 		self.button11(main_url)
 	def Health(self):
-		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=80dcf91e3abd4c62a5154f0e33c25bc4"
+		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=<Insert your API Key>"
 		self.button11(main_url)
 	def Sports(self):
-		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=80dcf91e3abd4c62a5154f0e33c25bc4"
+		main_url=self.main_url="https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=<Insert your API Key>"
 		self.button11(main_url)
 	def quit(self):
 		self.third.destroy()
